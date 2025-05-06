@@ -1,62 +1,149 @@
 ---
-import Layout from '../layouts/BlogPost.astro';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
-<Layout
-	title="About Me"
-	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date('August 08 2021')}
-	heroImage="/blog-placeholder-about.jpg"
->
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
-		viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
-		adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus
-		et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-		vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque
-		sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
-	</p>
+<!doctype html>
+<html lang="ja">
+	<head>
+		<BaseHead title="会社概要" description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main class="pt-20">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+				<h1 class="text-4xl font-bold mb-8 text-center bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">会社概要</h1>
+				
+				<div class="space-y-8">
+					<div class="bg-white/90 backdrop-blur-sm p-6 rounded-lg shadow-lg">
+						<h2 class="text-2xl font-bold mb-4 text-primary">基本情報</h2>
+						<dl class="space-y-4">
+							<div>
+								<dt class="font-bold">会社名</dt>
+								<dd>Solanika株式会社</dd>
+							</div>
+							<div>
+								<dt class="font-bold">事業内容</dt>
+								<dd>レーザー無線給電システムの研究開発・製造・販売</dd>
+							</div>
+						</dl>
+					</div>
+					
+					<div class="bg-white/90 backdrop-blur-sm p-6 rounded-lg shadow-lg">
+						<h2 class="text-2xl font-bold mb-4 text-primary">経営理念</h2>
+						<div class="space-y-4">
+							<p>私たちは、レーザー技術を通じて、地上から宇宙まで、エネルギーが途切れない世界の実現を目指しています。</p>
+							<p>安全性、革新性、共創性、持続可能性を軸に、社会インフラのアップデートに取り組みます。</p>
+						</div>
+					</div>
 
-	<p>
-		Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non
-		tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non
-		blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna
-		porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis
-		massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc.
-		Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis
-		bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra
-		massa massa ultricies mi.
-	</p>
+					<div class="bg-white/90 backdrop-blur-sm p-6 rounded-lg shadow-lg">
+						<h2 class="text-2xl font-bold mb-4 text-primary">技術開発</h2>
+						<div class="space-y-4">
+							<p>当社は以下の技術領域で研究開発を進めています：</p>
+							<ul class="list-disc list-inside space-y-2">
+								<li>高精度レーザー追尾システム</li>
+								<li>ドローン用受電モジュール</li>
+								<li>エネルギーマネジメント回路</li>
+								<li>宇宙探査向け電力インフラ</li>
+							</ul>
+						</div>
+					</div>
 
-	<p>
-		Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl
-		suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet
-		nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae
-		turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem
-		dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat
-		semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus
-		vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum
-		facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam
-		vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla
-		urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
-	</p>
+					<div class="bg-white/90 backdrop-blur-sm p-6 rounded-lg shadow-lg">
+						<h2 class="text-2xl font-bold mb-4 text-primary">沿革</h2>
+						<div class="space-y-4">
+							<div class="flex justify-between items-center">
+								<span class="font-bold">2025年4月</span>
+								<span>研究開発拠点設立</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>
 
-	<p>
-		Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper
-		viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc
-		scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur
-		gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus
-		pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim
-		blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id
-		cursus metus aliquam eleifend mi.
-	</p>
+<style>
+	:root {
+		--primary-color: #00b4d8;
+		--secondary-color: #ff6b35;
+		--text-color: #2b2d42;
+		--background-start: #e0f7fa;
+		--background-end: #fff3e0;
+	}
 
-	<p>
-		Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta
-		nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam
-		tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci
-		ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar
-		proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
-	</p>
-</Layout>
+	body {
+		margin: 0;
+		padding: 0;
+		font-family: 'Noto Sans JP', sans-serif;
+		background: linear-gradient(135deg, var(--background-start), var(--background-end));
+		color: var(--text-color);
+		min-height: 100vh;
+	}
+
+	.section {
+		padding: 4rem 2rem;
+		max-width: 100%;
+		margin: 0 auto;
+	}
+
+	.section-title {
+		font-size: 3rem;
+		font-weight: 700;
+		margin-bottom: 3rem;
+		position: relative;
+		display: inline-block;
+		background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	.section-title::after {
+		content: '';
+		position: absolute;
+		bottom: -10px;
+		left: 0;
+		width: 100%;
+		height: 4px;
+		background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+		border-radius: 2px;
+	}
+
+	.content-box {
+		background: rgba(255, 255, 255, 0.9);
+		padding: 3rem;
+		border-radius: 20px;
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(10px);
+		margin-bottom: 2rem;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.content-box::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 4px;
+		background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+	}
+
+	@media (max-width: 768px) {
+		.section {
+			padding: 4rem 1rem;
+		}
+		.section-title {
+			font-size: 2rem;
+		}
+		.content-box {
+			padding: 2rem;
+		}
+	}
+</style>
